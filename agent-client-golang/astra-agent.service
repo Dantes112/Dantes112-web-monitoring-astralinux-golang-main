@@ -1,0 +1,17 @@
+[Unit]
+Description=Astra Linux Monitoring Agent
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=sa
+WorkingDirectory=/opt/astra-agent
+ExecStart=/opt/astra-agent/agent
+Restart=always
+RestartSec=10
+StandartOutput=append:/opt/astra-agent/agent.log
+StandartError=append:/opt/astra-agent/agent.log
+
+[Install]
+WantedBy=multi-user.target

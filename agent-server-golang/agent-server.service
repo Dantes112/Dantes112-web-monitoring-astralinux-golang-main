@@ -1,0 +1,14 @@
+[Unit]
+Description=GO Agent Server for Astra Linux
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/agent-server
+ExecStart=/opt/agent-server/agent-server
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

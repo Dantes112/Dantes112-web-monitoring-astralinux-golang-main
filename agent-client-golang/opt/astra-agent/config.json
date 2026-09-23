@@ -1,0 +1,11 @@
+{
+    "server_url": "http://192.168.7.87:8080/api/agent",
+    "interval_seconds": 30,
+    "services": [
+        "ssh",
+        "nginx",
+        "postgresql",
+        "docker",
+        "systemd-journald"
+    ]
+}
